@@ -5,6 +5,8 @@
         <meta charset="utf-8" />
     </head>
     <body>
+        <!-- 2019-09-02 -->
+        <a href="index.html">돌아가기</a>
         <!-- h1 ~ h6 / 순번x, 깊이(depth)o / h7 x : 인식을 하지 못함-->
         <h1>대제목</h1>
         <h2>중제목</h2>
@@ -40,5 +42,86 @@
             <dt>order list 순차 목록</dt>
             <dd>순서에 영향을 많이 받는 목록을 이야기 합니다.</dd>
         </dl>
+
+
+        <!-- 2019-09-09 -->
+        <!-- strong, em, b, i -->
+        <!-- strong 글씨가 두꺼워짐 -->
+        <strong>강한 강조</strong>
+        <!-- em 글씨가 기울어짐 -->
+        <em>강조</em>
+
+        <b>볼드체</b>
+        <i>이텔릭체</i>
+
+        <!-- ins 첨부하다, del 삭제하다, u 밑줄, strike 가운데줄-->
+        <ins>추가하고 싶은 정보</ins>
+        <del>쓸모없는 정보나 관계없는 정보</del>
+
+        <u>밑줄 형태</u>
+        <strike>가운데줄 형태</strike>
+
+        <!-- sup 위첨자, sub 아래첨자 -->
+        2<sup>2</sup> : 2의 2제곱
+        H<sub>2</sub>O : 물에 대한 화학식
+
+        <!-- a anchor : 닻 -->
+        <a href="./index.html">버튼</a>
+
+        <!-- img image 이미지 -->
+        <img src="./images/cat1.jpg" width="100px" />
+        <img src="images/cat1.jpg" height="100px" />
+
+        <!-- table 도표 -->
+        <!-- table, tr, td -->
+        <style>
+            table, tr, td{
+                border : solid 1px black;
+            }
+            td{
+                width : 100px;
+            }
+        </style>
+        <!-- colspan(열), rowspan(행) : 아래가 아니라 오른쪽으로 밀림-->
+        <!-- thead, tfoot,  tbody-->
+        <table summary="요약">
+            <caption>[도표1] 도표제목</caption>
+            <thead>
+                <tr>
+                    <th scope="col">제목1</th><!-- th : 제목을 의미 -->
+                    <th scope="col">제목2</th>
+                    <th scope="col">제목3</th>
+                    <th scope="col">제목4</th>
+                    <th scope="col">제목5</th>
+                </tr>
+            </thead>
+            <tr>
+                <!-- 1행 4열 -->
+                <td colspan="2">1</td><!-- 가로로 2칸 사용하기 -->
+                <td rowspan="2">2</td><!-- 세로로 2칸 사용하기 -->
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+        </table>
+        <table>
+            <caption>[과제]표 만들기</caption>
+            <tr>
+                <td colspan="2">up</td>
+                <td rowspan="2">right</td>
+            </tr>
+            <tr>
+                <td rowspan="2">left</td>
+                <td>center</td>
+            </tr>
+            <tr>
+                <td colspan="2">down</td>
+            </tr>
+        </table>
     </body>
 </html>
