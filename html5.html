@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>HTML5</title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <!-- 2019-09-23 -->
+        <a href="index.html">돌아가기</a>
+        <header>머릿말(서론)</header>
+        <div>
+            <nav>네비게이션(다른 곳으로 이동하기 위한 버튼 모양)</nav>
+            <section>구획
+                <h1>구획 제목</h1>
+                <div></div>
+                <article>뉴스, 기사글, 블로그내용, 글</article>
+            </section>
+            <aside>광고, 연관링크 등</aside>
+        </div>
+        <footer>맺음말(결론)</footer>
+
+        <style>
+            canvas{
+                width: 300px;
+                height: 150px;
+            }
+        </style>
+        <canvas id="myCanvas">
+        </canvas>
+        <script>
+            /*javascript*/
+            var canvas = document.getElementById("myCanvas"); //myCanvas라는 이름의 canvas element를 받아옵니다.
+            var ctx = canvas.getContext("2d"); //2D canvas를 생성합니다.
+            ctx.fillStyle = "#FF0000"; //색을 지정합니다.
+
+            ctx.fillRect(25, 25, 100, 100); //채움 사각형
+            ctx.clearRect(45, 45, 60, 60); //사각형태로 지우기
+            ctx.strokeRect(50, 50, 50, 50); //윤곽 사각형
+
+            ctx.fillStyle = "#000000";
+            ctx.beginPath(); //선그리기 시작
+            ctx.moveTo(65, 75); //펜 들어 움직이기
+            ctx.lineTo(90, 95); //선 그으며 움직이기
+            ctx.lineTo(90, 55);
+            ctx.fill(); //내부 채우기
+
+            ctx.beginPath();
+            ctx.arc(225, 75, 50, 0, Math.PI * 2, true); // Outer circle 
+            ctx.moveTo(260, 75);
+            ctx.arc(225, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+            ctx.moveTo(215, 65);
+            ctx.arc(210, 65, 5, 0, Math.PI * 2, true);  // Left eye
+            ctx.moveTo(245, 65);
+            ctx.arc(240, 65, 5, 0, Math.PI * 2, true);  // Right eye
+            ctx.stroke();
+        </script>
+
+        <!-- 오디오(소리)를 서비스 하기 위한 태그 -->
+        <audio controls autoplay><!-- controls : 제어장치 / autoplay : 자동재생(현재 크롬x) -->
+            <source src="./media/crowd-cheering.mp3" type="audio/mpeg" />
+        </audio>
+
+        <video controls autoplay>
+            <source src="./media/big_buck_bunny_720p_1mb.mp4" type="video/mp4" />
+        </video>
+    </body>
+</html>

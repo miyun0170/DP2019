@@ -123,5 +123,43 @@
                 <td colspan="2">down</td>
             </tr>
         </table>
+
+        <!-- 2019-09-23 -->
+        <!-- form 양식지-->
+        <form>
+            <label for="id">아이디</label>
+            <input type="text" placeholder="아이디를 입력하세요" />
+            <input type="password" placeholder="패스워드를 입력하세요" />
+            
+            <!-- 라디오는 name이 중요함, 단일선택(같은 name에 한하여)-->
+            <input type="radio" name="bt1" checked />
+            <input type="radio" name="bt1" />
+            <input type="radio" name="bt1" />
+
+            <input type="radio" name="bt2" />
+            <input type="radio" name="bt2" />
+            <input type="radio" name="bt2" />
+            
+            <!-- 복수선택을 목적으로 하는 입력장치 -->
+            <input type="checkbox" checked />
+            <input type="checkbox" />
+            <input type="checkbox" />
+            
+            <!-- 선택박스, 콤보박스 -->
+            <!-- 선택할 수 있는 선택지를 미리 알리기 위함, 입력실수 방지 -->
+            <select>
+                <option>사이트 선택</option>
+                <option>www.naver.com</option>
+                <option>www.gogle.com</option>
+            </select>
+
+            <!-- 여러줄의 문자를 입력할 때 사용 cols(가로 글자수), rows(세로 글자수)-->
+            <textarea cols="30" rows="5">
+            </textarea>
+
+            <input type="button" value="버튼" />
+            <input type="button" onclick="alert('테스트 버튼이 눌렸습니다.')" value="테스트 버튼" />
+            <input type="submit" value="제출" />
+        </form>
     </body>
 </html>

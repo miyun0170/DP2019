@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>form</title>  
+        <meta charset="utf-8" />  
+    </head>
+    <body>
+        <a href="index.html">뒤로가기</a>
+        <style>
+        a{
+            text-decoration: none;
+            background-color: purple;
+            color:white;
+            border-radius: 4px;
+        }
+        body{
+            background-color:lemonchiffon;
+            width: 600px;
+            margin: 0 auto;
+            font-weight: bold;
+            color:mediumaquamarine;
+        }
+        h1{
+            text-align: center;
+            color:purple;
+        }
+        label{ 
+            display: block; 
+            position: relative; 
+        }
+        input[type="submit"]{
+            width:600px;
+            height:60px;
+            background-color: purple;
+            color: white;
+            border: none;
+            font-size: 15pt;
+        }
+        .use1{
+            width:596px;
+            height:40px;
+        }
+        .use2{
+            width:192px;
+            height:40px;
+        }
+        select{
+            width:100px;
+            height:40px;
+        }
+        </style>
+
+        <!-- 회원가입 양식지 만들기 -->
+        <h1>회원가입</h1>
+
+        <form>
+            <p>
+                <label for="ID">아이디</label>
+                <input type="text" id="ID" class="use1" required />
+            </p>
+            <p>
+                <label for="PW">비밀번호</label>
+                <input type="password" id="PW"  class="use1" required />
+            </p>
+            <p>
+                <label for="PWC">비밀번호 재확인</label>
+                <input type="password" id="PWC" class="use1" required />
+            </p>
+            <p>
+                <label for="UN">이름</label>
+                <input type="text" id="UN" class="use1" required />
+            </p>
+            <p>
+                <label for="DB">생년월일</label>
+                <input type="text" placeholder="년(4자)" id="DB" class="use2" required />
+                <input type="text" placeholder="월" class="use2" required/>
+                <input type="text" placeholder="일" class="use2" required/>
+            </p>
+            <p>
+                성별
+                <select required>
+                    <option value="" >성별</option>
+                    <option>남자</option>
+                    <option>여자</option>
+                </select>
+            </p>
+            <p>
+                이메일 수신
+                <input type="radio" name="bt1" checked />수신
+                <input type="radio" name="bt1" />미수신
+            </p>
+            <input type="submit" value="가입하기" />
+            </fieldset>
+        </form>
+    </body>
+</html>
