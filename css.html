@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="default.css" />
         <!-- embed 들여오다, 포함되어 있는 -->
         <style>
-            #id_embde{
+            #id_embed{
                 color:blue;
             }
         </style>
@@ -17,6 +17,17 @@
         <a href="index.html">돌아가기</a>
         <div id="id_external">external로 적용</div>
         <div id="id_embed">embed 적용</div>
+        <div style="color:green;">inline으로 적용</div><!--되도록이면 하지 않는 것 -->
 
+        <!-- html주석 -->
+        <style>
+            /* embed */
+            /* 요소(element) 선택자 */
+            b{ color:violet; }
+            /* 클래스(class) 선택자 */
+            .c_name{ color:gray; }
+        </style>
+        <b>볼드체</b>
+        <div class="c_name">클래스 선택자</div>
     </body>
 </html>
