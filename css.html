@@ -24,10 +24,89 @@
             /* embed */
             /* 요소(element) 선택자 */
             b{ color:violet; }
-            /* 클래스(class) 선택자 */
+            /* 클래스(class) 선택자: 중복 가능 */
             .c_name{ color:gray; }
+            /* 아이디(id) 선택자 : 중복 불가*/
+            #i_name{ color:tomato; }
         </style>
         <b>볼드체</b>
         <div class="c_name">클래스 선택자</div>
+        <div id="i_name">아이디 선택자</div>
+
+        <style>
+            /* before 이전 */
+            #virtual_element:before{
+                content:"시작";
+            }
+            /* after 다음*/
+            #virtual_element:after{
+                content:"끝";
+            }
+            /* first-letter 첫번째 글자*/
+            #virtual_element:first-letter{
+                font-size:30px;
+            }
+            /* first-line 첫째줄 */
+            #virtual_element:first-line{
+                color:pink;
+            }
+        </style>
+        <div id="virtual_element"> 
+            가상 요소 선택자 가상 요소 선택자 가상 요소 선택자 가상 요소 선택자
+            가상 요소 선택자 가상 요소 선택자 가상 요소 선택자 가상 요소 선택자
+        </div>  
+
+        <style>
+            .class1:first-child{ color:red; }
+            .class1:last-child{ color:green; }
+            .class1:nth-child(3){ color:blue; }
+            /* 1st, 2nd, 3rd, 4th, 5th ......(n)th n번째 */
+        </style>
+        <div id="virtual_class">
+            <ul><!-- parent 부모 -->
+                <li class="class1">리스트1</li><!-- child 자식 -->
+                <li class="class1">리스트2</li>
+                <li class="class1">리스트3</li>
+                <li class="class1">리스트4</li>
+            </ul>
+        </div> 
+        
+        <style>
+            /* :link, :visited, :hover, :active, :focus */
+            a:link{color:red;} /* 기본 모양 */
+            a:visited{color:green;}/* 방문 한적 있음*/
+            a:hover{color:yellow;}/* 마우스 올림 */
+            a:active{color:pink;}/* 활성화 */
+            a:focus{color:purple;}/*집중됨, 주목함*/
+        </style>
+        <a href="#">링크 버튼</a>
+
+        <style>
+            /* 하위 선택자, 띄어쓰기*/
+            div li{color:gray;}
+            /* 자식 선택자, 부등호(>)*/
+            div>ul>li{text-decoration: underline;}
+            /*선택자 그룹, 쉼표(,)*/
+            div, ul, li{font-weight: bold;}
+        </style>
+        <div>
+            <ul>
+                <li>리스트1</li>
+                <li>리스트1</li>
+                <li>리스트1</li>
+                <li>리스트1</li>
+            </ul>
+        </div>
+
+        <style>
+            .color_sample{
+                color:red;
+                color:#000; /*3자리 컬러코드, #rgb*/
+                color:#000000; /*6자리 컬러코드, #rrggbb*/
+                color:rgb(0,0,255); /*0~255*/
+                color:rgb(0%,10%,100%); /*0%~100%*/ /*여러 색깔 중 마지막이 적용됨*/
+            }
+        </style>
+        <div class="color_sample">색상 입력방법</div>
     </body>
 </html>
