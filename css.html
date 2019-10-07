@@ -108,5 +108,122 @@
             }
         </style>
         <div class="color_sample">색상 입력방법</div>
+
+
+        <style>
+            #block_target, #inline_target{
+                border:solid 1px black;/*경계선 : 실선 1px두께 검은선*/
+                width:200px;/*넓이 : 200px*/
+                height:200px;/*높이 : 200px*/
+                margin:20px;/*바깥여백 : 20px*/
+                padding:30px;/*안쪽여백 : 30px*/
+                /*margin-top 10px : 위쪽 여백 10px */
+                /*top right bottom left*/
+            }
+        </style>
+        <div id="block_target">block형 태크</div>
+        <span id="inline_target">inline형 태그</span>
+
+        <style>
+            #position_target{
+                position: static;/*기본형*/
+                /*위치 : 정적인*/
+                /*relative : 관계형*/
+                /*absolute : 절대적인*/
+                /*fixed : 고정된*/
+                position:absolute;
+                top:10px;
+                left:10px;
+                /*top right bottom left*/
+            }
+        </style>
+        <div id="position_target">position 연습</div>
+
+        <style>
+            #font_target{
+                font-family:'돋움', Dotum, sans-serif;
+                /*돋움이 안되면 Dotum으로, Dotum이 안되면 sans-sefif로*/
+                font-size:30px;
+                font-weight: bold;
+                /*normal light bold bolder, 100,200,300,400*/
+                /*폰트에서 지원할 때만 표현 됨*/
+                font-style: italic;/*기울임체*/
+                font-variant:small-caps;/*작은 대문자 표기*/
+            }
+            #font_target2{
+                font-family:'휴먼편지체','돋움', Dotum, sans-serif;
+                /*돋움이 안되면 Dotum으로, Dotum이 안되면 sans-sefif로*/
+            }
+        </style>
+        <div id="font_target">font 변경하기 ABcdEFghIJklMNop</div>
+        <div id="font_target2">font2 변경하기</div>
+
+        <style>
+            #align_target{
+                text-align:center;/*글씨를 가운데*/
+                width:100px;
+                margin-left:auto;/*박스를 가운데*/
+                margin-right:auto;/*박스를 가운데*/
+                /*
+                height:100px;
+                border:solid 1px black;
+                vertical-align: middle;
+                */
+                text-decoration: underline;
+                /*none, underline, overline, line-through*/
+            }
+        </style>
+        <div id="align_target">글자 정렬 방식</div>
+
+        <style>
+                /*
+                    baseline : 기준선에 정렬
+                    top : 위쪽정렬
+                    text-top : 위쪽정렬
+                    middle : 중앙정렬
+                    bottom : 하단정렬
+                    text-bottom : 하단정렬
+                */
+                #table_target td{
+                    width:150px;
+                    height:150px;
+                    border:solid 1px black;
+                }
+                #vartical_baseline{ vertical-align: baseline; }
+                #vartical_top{ vertical-align: top; }
+                #vartical_text_top{ vertical-align: text-top; }
+                #vartical_middle{ vertical-align: middle; }
+                #vertical_bottom{ vertical-align: bottom; }
+                #vertical_text_bottom{ vertical-align: text-bottom; }
+            </style>
+            <table id="table_target">
+                <tr>
+                    <td id="vartical_baseline">top</td>
+                    <td id="vartical_top">top</td>
+                    <td id="vartical_text_top">text_top</td>
+                    <td id="vartical_middle">middle</td>
+                    <td id="vertical_bottom">bottom</td>
+                    <td id="vertical_text_bottom">text_bottom</td>
+                </tr>
+            </table>
+
+            <style>
+                #space_target{
+                    letter-spacing:20px;/*글자 사이의 간격*/
+                    line-height: 40px;/*줄의 높이*/
+                    text-indent: 50px;/*첫줄 들여쓰기*/
+                    text-transform: uppercase;
+                    /*UPPERCASE, lowercase, Capitalize*/
+                    white-space: pre;/*공백 및 줄내림 모두 표현*/
+                }
+            </style>
+            <div id="space_target">
+                평범하고 내성적인 고등학생 ‘피터 파커’,
+                그는 우연히 방사능에 감염된 거미에 물린다.그 후, 
+                피터는 손에서 거미줄이 튀어 나오고 벽을 기어 오를 수 있는 거미와 같은 능력을 갖게 된다. 
+                다가오는 위험을 본능적으로 감지하는 초감각과 엄청난 파워를 소유하게 된 것이다.
+            </div>
+
+
     </body>
 </html>
