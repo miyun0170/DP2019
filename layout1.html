@@ -8,6 +8,9 @@
                 /*border:solid 1px black;*/
                 /*margin:5px;*/
             }
+            header{
+                padding:10px 70px;/*상하 좌우*/
+            }
             header>ul>li{
                 float:left;/*둥둥떠다님:왼쪽기준;*/
                 list-style:none;
@@ -40,6 +43,7 @@
             }
             nav{
                 background-color:#eee;
+                padding:20px 70px;
             }
             nav>ul{
                 padding:0px;
@@ -66,8 +70,71 @@
             div>section:nth-child(4){
                 background-color:#ec5;
             }
+            div>section>div{
+                width:1000px;
+                margin-left:auto;
+                margin-right:auto;  
+                /*가운데 정렬*/
+            }
+            section{
+                padding:50px 0px;/*상하 좌우*/
+            }
             .content_part{
                 width:480px;
+                float: left;/*둥둥 떠다니도록 : 왼쪽기준*/
+                /*margin-top:5px;
+                margin-bottom: 5px;
+                margin-left: 10px;
+                margin-right: 10px;(아래와 동일한 역활)*/
+                margin:5px 10px; /*상하 좌우*/
+            }
+            section>div>h3{
+                color:white;
+            }
+            dt{
+                margin:15px 0px; /*상하 좌우*/
+                font-weight: bold;
+            }
+            dd{
+                margin:0px;    
+            }
+            footer{
+                background-color:#333;
+                color:#aaa;/*글자 색깔, 상속됨*/
+                padding:20px 70px;
+            }
+            #navi_ul{
+                padding:0px;
+            }
+            #navi_ul>li{
+                float:left;
+                list-style: none;
+                padding:0px 10px;/*상하 좌우*/
+                border-right:solid 2px #aaa; /*경계선*/
+            }
+            #navi_ul>li:nth-child(6){
+                border:none;
+            }
+
+            #icon_ul{
+                padding:0px;
+            }
+            #icon_ul>li{
+                float:left;
+                list-style: none;
+                padding:0px 10px;/*상하 좌우*/
+            }
+            #footer_left{
+                float:left;
+            }
+            #icon_ul{
+                float:right;
+            }
+            #wrap{
+                min-width: 1000px;/*최소 가로 사이즈 : 1000px*/
+                max-width: 1920px;/*최소 가로 사이즈 : 1000px*/
+                /*1024*768, 1920*1080(FHD)*/
+                margin:0px auto; /*상하 0px, 좌우 자동*/
             }
         </style>
     </head>
@@ -104,147 +171,162 @@
             </nav>
             <div>
                 <section>
-                    <h3>Web Design</h3>
-                    <div class="content_part">
-                        <img src="images/layout1_img1.jpg" />
-                        <dl>
-                            <dt>
-                                Lorem ipsum dolor sit amet
-                            </dt>
-                            <dt>
-                                Consectetur adipiscing elit.
-                                Suspendisse sed leo tellus. 
-                                Praesent nec vehicula ligula, non laoreet ligula. 
-                                Maecenas at massa eget orci porttitor semper.
-                            </dt>
-                        </dl>
-                    </div>
-                    <div class="content_part">
-                        <img src="images/layout1_img2.jpg" />
-                        <dl>
-                            <dt>
-                                Lorem ipsum dolor sit amet
-                            </dt>
-                            <dt>
-                                Consectetur adipiscing elit.
-                                Suspendisse sed leo tellus.
-                                Praesent nec vehicula ligula, non laoreet ligula.
-                                Maecenas at massa eget orci porttitor semper.
-                            </dt>
-                        </dl>
-                    </div>
-                </section>
-                <section>
-                    <h3>Icons</h3>
-                    <div class="content_part">
-                        <img src="images/layout1_img3.jpg" />
-                        <dl>
-                            <dt>
-                                Lorem ipsum dolor sit amet
-                            </dt>
-                            <dt>
-                                Consectetur adipiscing elit.
-                                Suspendisse sed leo tellus. 
-                                Praesent nec vehicula ligula, non laoreet ligula. 
-                                Maecenas at massa eget orci porttitor semper.
-                            </dt>
-                        </dl>
-                    </div>
-                    <div class="content_part">
-                        <img src="images/layout1_img4.jpg" />
-                        <dl>
-                            <dt>
-                                Lorem ipsum dolor sit amet
-                            </dt>
-                            <dt>
-                                Consectetur adipiscing elit.
-                                Suspendisse sed leo tellus.
-                                Praesent nec vehicula ligula, non laoreet ligula.
-                                Maecenas at massa eget orci porttitor semper.
-                            </dt>
-                        </dl>
+                    <div>
+                        <h3>Web Design</h3>
+                        <div class="content_part">
+                            <img src="images/layout1_img1.jpg" />
+                            <dl>
+                                <dt>
+                                    Lorem ipsum dolor sit amet
+                                </dt>
+                                <dd>
+                                    Consectetur adipiscing elit.
+                                    Suspendisse sed leo tellus. 
+                                    Praesent nec vehicula ligula, non laoreet ligula. 
+                                    Maecenas at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="content_part">
+                            <img src="images/layout1_img2.jpg" />
+                            <dl>
+                                <dt>
+                                    Lorem ipsum dolor sit amet
+                                </dt>
+                                <dd>
+                                    Consectetur adipiscing elit.
+                                    Suspendisse sed leo tellus.
+                                    Praesent nec vehicula ligula, non laoreet ligula.
+                                    Maecenas at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="clear"></div>
                     </div>
                 </section>
                 <section>
-                    <h3>illustrations</h3>
-                    <div class="content_part">
-                        <img src="images/layout1_img5.jpg" />
-                        <dl>
-                            <dt>
-                                Lorem ipsum dolor sit amet
-                            </dt>
-                            <dt>
-                                Consectetur adipiscing elit.
-                                Suspendisse sed leo tellus. 
-                                Praesent nec vehicula ligula, non laoreet ligula. 
-                                Maecenas at massa eget orci porttitor semper.
-                            </dt>
-                        </dl>
-                    </div>
-                    <div class="content_part">
-                        <img src="images/layout1_img6.jpg" />
-                        <dl>
-                            <dt>
-                                Lorem ipsum dolor sit amet
-                            </dt>
-                            <dt>
-                                Consectetur adipiscing elit.
-                                Suspendisse sed leo tellus.
-                                Praesent nec vehicula ligula, non laoreet ligula.
-                                Maecenas at massa eget orci porttitor semper.
-                            </dt>
-                        </dl>
+                    <div>
+                        <h3>Icons</h3>
+                        <div class="content_part">
+                            <img src="images/layout1_img3.jpg" />
+                            <dl>
+                                <dt>
+                                    Lorem ipsum dolor sit amet
+                                </dt>
+                                <dd>
+                                    Consectetur adipiscing elit.
+                                    Suspendisse sed leo tellus. 
+                                    Praesent nec vehicula ligula, non laoreet ligula. 
+                                    Maecenas at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="content_part">
+                            <img src="images/layout1_img4.jpg" />
+                            <dl>
+                                <dt>
+                                    Lorem ipsum dolor sit amet
+                                </dt>
+                                <dd>
+                                    Consectetur adipiscing elit.
+                                    Suspendisse sed leo tellus.
+                                    Praesent nec vehicula ligula, non laoreet ligula.
+                                    Maecenas at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="clear"></div>
                     </div>
                 </section>
                 <section>
-                    <h3>Miscellaneous</h3>
-                    <div class="content_part">
-                        <img src="images/layout1_img7.jpg" />
-                        <dl>
-                            <dt>
-                                Lorem ipsum dolor sit amet
-                            </dt>
-                            <dt>
-                                Consectetur adipiscing elit.
-                                Suspendisse sed leo tellus. 
-                                Praesent nec vehicula ligula, non laoreet ligula. 
-                                Maecenas at massa eget orci porttitor semper.
-                            </dt>
-                        </dl>
+                    <div>
+                        <h3>illustrations</h3>
+                        <div class="content_part">
+                            <img src="images/layout1_img5.jpg" />
+                            <dl>
+                                <dt>
+                                    Lorem ipsum dolor sit amet
+                                </dt>
+                                <dd>
+                                    Consectetur adipiscing elit.
+                                    Suspendisse sed leo tellus. 
+                                    Praesent nec vehicula ligula, non laoreet ligula. 
+                                    Maecenas at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="content_part">
+                            <img src="images/layout1_img6.jpg" />
+                            <dl>
+                                <dt>
+                                    Lorem ipsum dolor sit amet
+                                </dt>
+                                <dd>
+                                    Consectetur adipiscing elit.
+                                    Suspendisse sed leo tellus.
+                                    Praesent nec vehicula ligula, non laoreet ligula.
+                                    Maecenas at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="clear"></div>
                     </div>
-                    <div class="content_part">
-                        <img src="images/layout1_img8.jpg" />
-                        <dl>
-                            <dt>
-                                Lorem ipsum dolor sit amet
-                            </dt>
-                            <dt>
-                                Consectetur adipiscing elit.
-                                Suspendisse sed leo tellus.
-                                Praesent nec vehicula ligula, non laoreet ligula.
-                                Maecenas at massa eget orci porttitor semper.
-                            </dt>
-                        </dl>
+                </section>
+                <section>
+                    <div>
+                        <h3>Miscellaneous</h3>
+                        <div class="content_part">
+                            <img src="images/layout1_img7.jpg" />
+                            <dl>
+                                <dt>
+                                    Lorem ipsum dolor sit amet
+                                </dt>
+                                <dd>
+                                    Consectetur adipiscing elit.
+                                    Suspendisse sed leo tellus. 
+                                    Praesent nec vehicula ligula, non laoreet ligula. 
+                                    Maecenas at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="content_part">
+                            <img src="images/layout1_img8.jpg" />
+                            <dl>
+                                <dt>
+                                    Lorem ipsum dolor sit amet
+                                </dt>
+                                <dd>
+                                    Consectetur adipiscing elit.
+                                    Suspendisse sed leo tellus.
+                                    Praesent nec vehicula ligula, non laoreet ligula.
+                                    Maecenas at massa eget orci porttitor semper.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="clear"></div>
                     </div>
                 </section>
             </div>
             <footer>
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Work</li>
-                    <li>Blog</li>
-                    <li>Contact us</li>
-                </ul>
-                <p>
-                    ⓒ 2013 BlueBox. All Right Reserved
-                </p>
-                <p>
-                    the loges in the design are the property of their 
-                    respective owners/copyright holders.
-                </p>
-                <ul>
+                <div id="footer_left">
+                    <ul id="navi_ul">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Services</li>
+                        <li>Work</li>
+                        <li>Blog</li>
+                        <li>Contact us</li>
+                        <div class="clear"></div>
+                    </ul>
+                    <p>
+                        ⓒ 2013 BlueBox. All Right Reserved
+                    </p>
+                    <p>
+                        the loges in the design are the property of their 
+                        respective owners/copyright holders.
+                    </p>
+                </div>
+                <ul id="icon_ul">
                     <li><img src="images/layout1_footer_icon1.png"></li>
                     <li><img src="images/layout1_footer_icon2.png"></li>
                     <li><img src="images/layout1_footer_icon3.png"></li>
@@ -252,6 +334,7 @@
                     <li><img src="images/layout1_footer_icon5.png"></li>
                     <li><img src="images/layout1_footer_icon6.png"></li>
                 </ul>
+                <div class="clear"></div>
             </footer>
         </div>
     </body>
