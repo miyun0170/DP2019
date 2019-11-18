@@ -4,85 +4,117 @@
         <title>레이아웃2</title>
         <meta charset="utf-8" />
         <style>
-            /* css입력하는 곳
-            style태그는 전달하는 정보가 아니므로 header에 입력*/
+            /* CSS 입력하는 곳 */
             header{
-                background-color: #02918c;
-                color:white; /*글자색은 상속 됩니다.*/
+               background-color:#02918c;
+               color: white; /* 글자색은 상속됩니다. */
+               padding: 10px 50px; /* 상하 좌우 */
             }
             header>h1>span:nth-child(2){
-                color:#cfc91d;
-            }
-            header>nav>ul{
-                margin:12px 0px;/*상하 좌우*/
+                color: #cfc91d;
             }
             header>h1{
-                margin:0px;
+                margin: 0px;
+            }
+            header>nav>ul{
+                margin: 12px 0px; /* 상하 좌우 */
             }
             header>nav>ul>li{
-                float:left;
-                list-style:none;
-                padding:0px 10px; /*상하 좌우*/
+                float: left;
+                list-style: none;
+                padding: 0px 10px; /* 상하 좌우 */
+            }
+            body{
+                margin: 0px;
             }
             #wrap{
-
+                min-width: 1000px;
+                max-width: 1920px;
+                margin-right: auto;
+                margin-left: auto;
             }
             .clear{
-                clear:both;/*float을 해제한다.*/
-                height:0px;/*높이 : 0*/
-                overflow:hidden;/*넘치면 : 숨김;*/
+                clear: both; /* float을 해제한다 */
+                height: 0px; /* 높이: 0; */
+                overflow: hidden; /* 넘치면: 숨김; */
             }
             .float_left{
-                float:left;
+                float: left;
             }
             .float_right{
-                float:right;
+                float: right;
             }
             #main_visual{
-                /*높이는 고정값 지정을 안해주는게 좋다*/
-                /*height:400px;*/
-                background-image: url('images/layout2_visual.jpg');
-                background-size:100% auto ;/*가로 세로*/
-                background-size:cover ;/* 표지 처럼 */
-                background-repeat:no-repeat;/*반복 방식*/
-                /*repeat, no-repeat, repeat-x, repeat-y*/
+                /* height: 400px; 높이는 웬만하면 고정값으로 지정하지 않는 것이 좋다. */
+                background-image: url("images/layout2_visual.jpg");
+                background-size: auto 100%; /* 가로 세로 100%는 최대치 */
+                background-size: cover; /* 표지처럼 */
+                background-repeat: no-repeat; /* 반복 방식 */
+                /* repeat, no-repeat, repeat-x, repeat-y */
                 background-color: black;
-                background-position:50% 50%; /*가로 세로*/
-               
-                color:white;
+                background-position: 50% 50%; /*가로 세로 왼쪽 상단 기준으로 이동한 위치 */
+                
+                color: white;
                 text-align: center;
-                padding:100px 0px;/*상하 좌우*/
+                padding: 100px 0px; /* 상하 좌우 */
             }
             #main_visual>h2{
-                font-size:35px;
-                letter-spacing:15px;
-                margin:8px 0px;/*상하 좌우*/
+                font-size: 35px;
+                letter-spacing: 15px; /* 글자 사이 간격 */
+                margin: 8px 0px;
             }
-            #toop_title{
-                font-size:25px;
+            #top_title{
+                font-size: 25px;
             }
-            #button_title{
-                font-size:15px;
+            #bottom_title{
+                font-size: 15px;
             }
             #button_container{
-                margin-top:100px;
+                margin-top: 100px;
             }
             section{
                 text-align: center;
             }
             section>h3{
-                color:#02918c;
+                color: #02918c;
+                margin: 30px 0px; /* 상하 좌우 */
+        
             }
-            section li{
-                float:left;
-                list-style:none;
-                width:25%;/* 100/4 =25 */
+            section>p{
+                margin: 30px 0px; /* 상하 좌우 */
+                padding: 0px 100px;
             }
-            section ul{
-                padding:0px;
+            section>#about_list>li{
+                float: left;
+                list-style: none;
+                width: 25%; /* 100 / 4 = 25 */
+                width:calc(25% - (1px /4 * 3) - 25px - 25px);
+
+                border-right: solid 1px #ccc;
+                padding: 25px;
+            }
+            section>#about_list>li:nth-child(4){
+                border: none;
+            }
+            section #about_list{
+                padding: 0px 50px; /* 상하 좌우 */ 
             }
             section dd{
-                margin:0px;
+                margin: 0px;
+            }
+            section>#work_list{
+                padding: 0px;
+                margin: 0px;
+            }
+            section>#work_list>li{
+                float: left;
+                list-style: none;
+                width: 25%;
+            }
+            section>#work_list img{
+                width: 100%; /* 내가 쓸 수 있는 공간 */
+                display: inline; /* 기본 = 인라인 */
+                display: block; /* 출력방식: 블록 */
             }
         </style>
     </head>
@@ -90,12 +122,11 @@
         <a href="index.html">돌아가기</a>
         <div id="wrap">
             <header>
-                <h1 class="float_left">
-                    <!-- span과 span사이의 띄어쓰기를 없애기 위해 둘 사이를 붙였다.-->
-                    <span>MY</span><span>FOLIO</span>
-                    <!-- div span 의미를 가지고 있지 않은 구획 나누기-->
-                </h1>
-                <nav class="float_right">
+               <h1 class="float_left">
+                   <span>MY</span><span>POLIO</span>
+                   <!-- div span 의미를 가지고 있지 않은 구획 나누기 (div는 자기 자리를 넓게 차지해서 줄내림이 되어버림. span은 인라인 태그라 빈공간에 나란히 있을 수 있다.)-->
+               </h1>
+               <nav class="float_right">
                     <ul>
                         <li>HOME</li>
                         <li>ABOUT ME</li>
@@ -109,72 +140,89 @@
             </header>
             <div id="main_visual">
                 <div id="top_title">
-                    Lorem ipsum dolor sit iusmod tempo
+                    Lorem ipsum dolor sit lusmod tempor
                 </div>
                 <h2>
                     INCIDIDUNT BORE
                 </h2>
-                <div id="button_title">
+                <div id="bottom_title">
                     Orem ipsum dolor sit amet, consectetur
                 </div>
                 <div id="button_container">
-                    <img src="images/layout2_button.jpg" />
+                    <img src="images/layout2_button.jpg"/>
                 </div>
             </div>
             <section>
                 <h3>ABOUT ME</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-                    sed do eiusmod tempor incididunt ut labore et <br /> dolore magna 
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                    ullamco laboris nisi ut aliquip ex ea <br /> commodo consequat 
-                    duis aute irure dolor.
-                </p>
-            <ul>
-                <li>
-                    <img src="images/layout2_icon1.jpg" />
-                    <dl>
-                        <dt>Title goes here</dt>
-                        <dd>
-                            onsectetur adipisicing elit, sedo eiusmod tempor 
-                            incidi et dolorerserss eerhfre mag.
-                        </dd>
-                    </dl>
-                </li>
-                <li>
-                    <img src="images/layout2_icon2.jpg" />
-                    <dl>
-                        <dt>Title goes here</dt>
-                        <dd>
-                            onsectetur adipisicing elit, sedo eiusmod tempor 
-                            incidi et dolorerserss eerhfre mag.
-                        </dd>
-                    </dl>
-                </li>
-                <li>
-                    <img src="images/layout2_icon3.jpg" />
-                    <dl>
-                        <dt>Title goes here</dt>
-                        <dd>
-                            onsectetur adipisicing elit, sedo eiusmod tempor 
-                            incidi et dolorerserss eerhfre mag.
-                        </dd>
-                    </dl>
-                </li>
-                <li>
-                    <img src="images/layout2_icon4.jpg" />
-                    <dl>
-                        <dt>Title goes here</dt>
-                        <dd>
-                            onsectetur adipisicing elit, sedo eiusmod tempor 
-                            incidi et dolorerserss eerhfre mag.
-                        </dd>
-                    </dl>
-                </li>
-                <div class="clear"></div>
-            </ul>
+                <P>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et 
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                    commodo consequat duis aute irure dolor. 
+                </P>
+                <ul id="about_list">
+                    <li>
+                        <img src="images/layout2_icon1.jpg"/>
+                        <dl>
+                            <dt>Title goes here</dt>
+                            <dd>
+                                onsectetur adipisicing elit, sedo eiusmod tempor incidi
+                                et dolorerserss eerhfre mag.
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <img src="images/layout2_icon2.jpg"/>
+                        <dl>
+                            <dt>Title goes here</dt>
+                            <dd>
+                                onsectetur adipisicing elit, sedo eiusmod tempor incidi
+                                et dolorerserss eerhfre mag.
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <img src="images/layout2_icon3.jpg"/>
+                        <dl>
+                            <dt>Title goes here</dt>
+                            <dd>
+                                onsectetur adipisicing elit, sedo eiusmod tempor incidi
+                                et dolorerserss eerhfre mag.
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <img src="images/layout2_icon4.jpg"/>
+                        <dl>
+                            <dt>Title goes here</dt>
+                            <dd>
+                                onsectetur adipisicing elit, sedo eiusmod tempor incidi
+                                et dolorerserss eerhfre mag.
+                            </dd>
+                        </dl>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
             </section>
-            <section>content2</section>
+            <section>
+                <h3>MY WORK</h3>
+                <P>
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua.
+                </P>
+                <ul id="work_list">
+                    <li><img src="images/layout2_pic1.jpg"/></li>
+                    <li><img src="images/layout2_pic2.jpg"/></li>
+                    <li><img src="images/layout2_pic3.jpg"/></li>
+                    <li><img src="images/layout2_pic4.jpg"/></li>
+                    <li><img src="images/layout2_pic5.jpg"/></li>
+                    <li><img src="images/layout2_pic6.jpg"/></li>
+                    <li><img src="images/layout2_pic7.jpg"/></li>
+                    <li><img src="images/layout2_pic8.jpg"/></li>
+                    <div class="clear"></div>
+                </ul>
+            </section>
         </div>
     </body>
 </html>

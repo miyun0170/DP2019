@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>레이아웃3</title>
+        <meta charset="utf-8" />
+        <style>
+            /* CSS 입력하는 곳 */
+            body{
+                background-image: url("images/Layout3_back.jpg")
+            }
+            .short_line{
+                width: 30px;
+                border-bottom: solid 1px gray;
+
+            }
+            header li{
+                float: left;
+                list-style: none;
+                padding: 0px 20px 0px 0px;
+                /* 상 우 하 좌 (위에서부터 시계방향)*/
+            }
+            header ul{
+                padding: 0px
+            }
+            .clear{
+                clear: both;
+                height: 0px;
+                overflow: hidden; 
+            }
+        </style>
+    </head>
+    <body>
+        <a href="index.html">돌아가기</a>
+        <div id="wrap">
+                <header>
+                <h1>Gridly</h1>
+                <div class="short_line"></div>
+                <nav>
+                    <ul>
+                        <li>home</li>
+                        <li>digital designs</li>
+                        <li>web designs</li>
+                        <li>branding/identity</li>
+                        <li>about me</li>
+                        <li>contact</li>
+                        <div class="clear"></div>
+                    </ul>
+                </nav>
+                <div class="short_line"></div>
+            </header>
+            <div id="content">
+                <ul>
+                    <li class="card">
+                        <div class="visual">
+                            <img src="images/layout3_img1.jpg" />
+                            <div>Photoshop Design</div>
+                        </div>
+                        <div class="info">
+                            <dl>
+                                <dt>Dulux Colour Awards</dt>
+                                <dd>
+                                    <div>12th October 2011</div>
+                                    <div class="short_line"></div>
+                                    <p>
+                                        A direct mail kit that announces the Dulux
+                                        Colour Awards Competition has commenced.
+                                        A collection of posters showing the famous
+                                        colours of history, advertises you add your
+                                        own colours to history.
+                                    </p>                                   
+                                    <div class="short_line"></div>
+                                </dd>
+                            </dl> 
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <footer>footer</footer>
+        </div>
+    </body>
+</html>
